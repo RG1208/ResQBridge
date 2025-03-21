@@ -77,8 +77,8 @@ export default function CrowdsourcingPage() {
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between mb-2">
-                      <span className="font-medium text-red-600">$75,000 raised</span>
-                      <span className="text-muted-foreground">of $100,000 goal</span>
+                      <span className="font-medium text-red-600">₹7,50,000 raised</span>
+                      <span className="text-muted-foreground">of ₹10,00,000 goal</span>
                     </div>
                     <Progress value={75} className="h-3" />
                   </div>
@@ -92,7 +92,7 @@ export default function CrowdsourcingPage() {
                       <p className="text-sm text-muted-foreground">Days Left</p>
                     </div>
                     <div>
-                      <p className="text-3xl font-bold text-red-600">$270</p>
+                      <p className="text-3xl font-bold text-red-600">₹22,950</p>
                       <p className="text-sm text-muted-foreground">Avg Donation</p>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ export default function CrowdsourcingPage() {
                           setCustomAmount("");
                         }}
                       >
-                        $25
+                        ₹100
                       </Button>
                       <Button
                         type="button"
@@ -141,7 +141,7 @@ export default function CrowdsourcingPage() {
                           setCustomAmount("");
                         }}
                       >
-                        $50
+                        ₹500
                       </Button>
                       <Button
                         type="button"
@@ -152,7 +152,7 @@ export default function CrowdsourcingPage() {
                           setCustomAmount("");
                         }}
                       >
-                        $100
+                        ₹1,000
                       </Button>
                       <Button
                         type="button"
@@ -163,7 +163,7 @@ export default function CrowdsourcingPage() {
                           setCustomAmount("");
                         }}
                       >
-                        $250
+                        ₹5,000
                       </Button>
                       <Button
                         type="button"
@@ -174,7 +174,7 @@ export default function CrowdsourcingPage() {
                           setCustomAmount("");
                         }}
                       >
-                        $500
+                        ₹10,000
                       </Button>
                       <Button
                         type="button"
@@ -288,12 +288,12 @@ export default function CrowdsourcingPage() {
             <h2 className="text-2xl font-bold text-center mb-8">Recent Supporters</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { name: "John D.", amount: "$250", message: "Happy to support this important cause!", date: "2 days ago" },
-                { name: "Anonymous", amount: "$100", message: "", date: "3 days ago" },
-                { name: "Sarah M.", amount: "$500", message: "Keep up the great work saving lives!", date: "1 week ago" },
-                { name: "Michael R.", amount: "$75", message: "In memory of my father", date: "1 week ago" },
-                { name: "Community Health Partners", amount: "$1,000", message: "Supporting our emergency services", date: "2 weeks ago" },
-                { name: "Lisa T.", amount: "$150", message: "Thank you for your service", date: "2 weeks ago" }
+                { name: "Rachit", amount: "₹1,000", message: "Happy to support this important cause!", date: "2 days ago" },
+                { name: "Khushi", amount: "₹500", message: "", date: "3 days ago" },
+                { name: "Jatin", amount: "₹10,000", message: "Keep up the great work saving lives!", date: "1 week ago" },
+                { name: "Vasu", amount: "₹100", message: "In memory of my father", date: "1 week ago" },
+                { name: "Community Health Partners", amount: "₹1,000", message: "Supporting our emergency services", date: "2 weeks ago" },
+                { name: "Rohan", amount: "₹5,000", message: "Thank you for your service", date: "2 weeks ago" }
               ].map((donor, index) => (
                 <Card key={index} className="bg-slate-50">
                   <CardContent className="pt-6">

@@ -1,8 +1,17 @@
 // src/Dashboard/Admin/AdminSidebar.tsx
-import { NavLink } from "react-router-dom";
-import { Home, FileText, Bell, Users, DollarSign, Settings } from "lucide-react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Home, FileText, Bell, Users, IndianRupee, Settings, LogOut } from "lucide-react";
 
 export function AdminSidebar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Clear user authentication data (e.g., tokens)
+    localStorage.removeItem("authToken");
+    // Redirect to the login page
+    navigate("/login");
+  };
+
   return (
     <aside className="w-64 min-h-screen bg-white shadow-lg border-r border-gray-200 p-6">
       <div className="mb-8">
@@ -72,7 +81,7 @@ export function AdminSidebar() {
             }`
           }
         >
-          <DollarSign className="h-5 w-5" />
+          <IndianRupee className="h-5 w-5" />
           <span>Donations</span>
         </NavLink>
         <NavLink
@@ -88,6 +97,13 @@ export function AdminSidebar() {
           <Settings className="h-5 w-5" />
           <span>Settings</span>
         </NavLink>
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-red-50 rounded-md transition-colors duration-200"
+        >
+          <LogOut className="h-5 w-5" />
+          <span>Logout</span>
+        </button>
       </nav>
     </aside>
   );

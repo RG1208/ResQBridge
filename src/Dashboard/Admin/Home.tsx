@@ -1,5 +1,5 @@
 // Dashboard/Admin/Home.tsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
         resolve({
           incidents: 123,
           users: 456,
-          donations: 78900,
+          donations: 789000,
         });
       }, 500);
     });
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
             <CardTitle className="text-xl font-semibold text-red-600">Donations</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">${metrics.donations.toLocaleString()}</p>
+            <p className="text-3xl font-bold">₹{metrics.donations.toLocaleString()}</p>
           </CardContent>
           <CardFooter>
             <p className="text-sm text-gray-500">Total donations received</p>
